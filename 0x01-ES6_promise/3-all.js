@@ -1,10 +1,10 @@
 import { uploadPhoto, createUser } from './utils';
-// eslint-disable-next-line
+/* eslint-disable no-unused-vars */
 export default function handleProfileSignup() {
-  // eslint-disable-next-line
+  /* eslint-disable no-unused-vars */
   Promise.all([uploadPhoto(), createUser()])
     .then((data) => {
-      // eslint-disable-next-line
+      /* eslint-disable no-unused-vars */
       const upload = data[0];
       const create = data[1];
 
