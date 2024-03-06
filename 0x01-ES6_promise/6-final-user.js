@@ -6,24 +6,8 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   const upload = uploadPhoto(fileName);
 
   return Promise.allSettled([signup, upload])
-    .then((data) => {
-      if (data.status === 'pending') {
-        return ({
-          status: data.status,
-          value: data.value,
-	});
-      }
-      else if (data.status === 'fulfilled') {
-        return ({
-          status: data.status,
-          value: data.value,
-	})
-      }
-      else {
-        return ({
-        status: data.status,
-        value: data.value,
-        })
-      }
-    })
+    .then((results) => results.map((result) => ({
+      status: result.status,
+      value: result.status === 'fulfilled' ? result.value : result.reason,
+    })));
 }
