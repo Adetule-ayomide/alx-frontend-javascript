@@ -7,8 +7,8 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
 
   return Promise.allSettled([signUp, upload])
     .then((results) => results.map((result) => {
-      return {
+      return ({
       status: result.status,
       value: result.status === 'fulfilled' ? result.value : result.reason.message,
-    }}));
+    })}));
 }
