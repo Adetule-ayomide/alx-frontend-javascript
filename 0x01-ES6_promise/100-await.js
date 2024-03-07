@@ -1,7 +1,8 @@
 import { uploadPhoto, createUser } from './utils';
 
 export default async function asyncUploadUser() {
-  let upload, create;
+  let upload;
+  let create;
   try {
     upload = await uploadPhoto();
     create = await createUser();
