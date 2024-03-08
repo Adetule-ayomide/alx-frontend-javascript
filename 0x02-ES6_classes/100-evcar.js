@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-underscore-dangle */
 import Car from './10-car';
 
 export default class EVCar extends Car {
