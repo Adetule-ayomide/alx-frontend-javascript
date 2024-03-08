@@ -15,8 +15,3 @@ export default class HolbertonClass {
     return this._location;
   }
 }
-
-
-const hc = new HolbertonClass(12, "Mezzanine")
-console.log(Number(hc));
-console.log(String(hc));
