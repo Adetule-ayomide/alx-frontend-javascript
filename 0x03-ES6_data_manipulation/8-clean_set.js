@@ -4,6 +4,3 @@ export default function cleanSet(set, string) {
   const setString = setFilter.map((item) => item.slice(string.length)).join('-');
   return setString;
 }
-
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
